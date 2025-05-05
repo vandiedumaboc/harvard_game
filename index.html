@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harvard Admissions Game 2050</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script> <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- INTRO PAGE -->
+    <div id="intro">
+        <h1>Welcome to Harvard Admissions 2050</h1>
+        <p>
+            The year is 2050, you are the Senior Admissions Officer at Harvard University, and in a historic move toward equality, Harvard has implemented an AI-blind admissions policy. 
+            Applicants may be human or AI, and now you must assess their merits without bias.
+            </p>
+            <p>
+            Your task: Review 10 short "Why Harvard?" personal statements. Swipe right to ACCEPT an applicant. Swipe left to REJECT an applicant.
+            </p>
+            <p>
+            Some AI applicants have crafted statements so compelling that they seem human. Some human applicants may seem too polished to be real. 
+            Choose wisely — the future of Harvard rests in your hands.
+        </p>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <!-- GAME PAGE -->
+    <div id="game" style="display: none;">
+        <div id="top-message"></div> <!-- Accept/Reject feedback -->
+        <div class="instructions">Swipe Right to Accept • Swipe Left to Reject</div>
+        <div id="card-stack">
+            <div class="card" id="card-top">
+                <div id="feedback"></div>
+                <h2 id="name">Loading...</h2>
+                <p id="statement">Please wait.</p>
+            </div>
+            <div class="card" id="card-next"></div>
+        </div>
+    </div>
+
+    <!-- RESULTS PAGE -->
+    <div id="result" style="display: none;">
+        <canvas id="resultsChart" width="400" height="300"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

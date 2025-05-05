@@ -1,0 +1,106 @@
+body {
+    font-family: 'Georgia', serif;
+    background: #A51C30; /* Harvard Crimson */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+p, h1, h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#intro, #game, #result {
+    text-align: center;
+    width: 100%;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.instructions {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#top-message {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#card-stack {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.card {
+    background: white;
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-next {
+    transform: scale(0.95) translateY(10px);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+#card-top {
+    z-index: 1;
+}
+
+#feedback {
+    font-size: 48px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #E5E5E5;
+    color: #A51C30;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #CCCCCC;
+}
